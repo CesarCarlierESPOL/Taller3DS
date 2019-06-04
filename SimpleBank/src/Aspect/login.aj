@@ -1,16 +1,21 @@
 import java.util.Scanner;
 
 public aspect login{
-	 pointcut valida(): call(* make*(..));
+	
+	private static Scanner input = new Scanner(System.in);
+	pointcut valida(): execution(* make*(..));
 		before(): valida(){
 			System.out.println("Ingrese usuario:");
-			Scanner sc = new Scanner(System.in);	
+			String inputText = input.nextLine(); 
+	        System.out.println("Ingrese contraseña:");
+	        inputText = input.nextLine();			
 		}
 	
-	 pointcut valida2():call(* my*(..));    
+	pointcut valida2(): execution(* my*(..));    
 		before(): valida2(){
 			System.out.println("Ingrese usuario:");
-			Scanner sc = new Scanner(System.in);
-			
+			String inputText = input.nextLine(); 
+	        System.out.println("Ingrese contraseña:");
+	        inputText = input.nextLine(); 			
 		}
 }

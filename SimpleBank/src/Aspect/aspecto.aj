@@ -42,7 +42,7 @@ public aspect aspecto{
     }
 	
     
-    pointcut valida(): call(* make*(..));
+    /*pointcut valida(): call(* make*(..));
 	before(): valida(){
 		System.out.println("Ingrese usuario:");
 		Scanner sc = new Scanner(System.in);
@@ -53,7 +53,7 @@ public aspect aspecto{
 		System.out.println("Ingrese usuario:");
 		Scanner sc = new Scanner(System.in);
 		
-	}
+	}*/
 	
 	
 }
