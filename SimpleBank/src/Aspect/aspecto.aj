@@ -12,9 +12,10 @@ public aspect aspecto{
 			FileWriter w = new FileWriter("log.txt",true);
 			BufferedWriter bw = new BufferedWriter(w);
 			PrintWriter wr = new PrintWriter(bw); 
-			cal.add(Calendar.DATE, 1);
-			SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+			cal.add(Calendar.DATE, 0);
+			SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 			String formatted = format1.format(cal.getTime());
+			System.out.println("Dinero retirado ");
 			wr.append("Dinero retirado ");
 			wr.append(formatted);
 			wr.append("\n");
@@ -29,9 +30,10 @@ public aspect aspecto{
 			FileWriter w = new FileWriter("log.txt",true);
 			BufferedWriter bw = new BufferedWriter(w);
 			PrintWriter wr = new PrintWriter(bw); 
-			cal.add(Calendar.DATE, 1);
-			SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+			cal.add(Calendar.DATE, 0);
+			SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 			String formatted = format1.format(cal.getTime());
+			System.out.println("Transacción realizada ");
 			wr.append("Transacción realizada "); //concatenamos en el archivo sin borrar lo existente
 			wr.append(formatted);
 			wr.append("\n");
